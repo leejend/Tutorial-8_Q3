@@ -9,12 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var genderField: UITextField!
+    @IBOutlet weak var myLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func submitBtn(_ sender: Any) {
+        let name = nameField.text!
+        let gender = genderField.text!
+        myLabel.text = "Hello: \(name) Gender: \(gender)"
+    }
+    
+    
 }
 
